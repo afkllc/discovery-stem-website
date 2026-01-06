@@ -1,7 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import type { ProductVariant } from "@/lib/shopify/types";
-import { BiLoaderAlt } from "react-icons/bi";
-import { addItemToCart } from "@/cartStore";
+import React from "react";
+
+export const AddToCart = () => (
+  <button className="btn btn-disabled" disabled>
+    Add to cart (disabled)
+  </button>
+);
+
+export default AddToCart;
 
 interface SubmitButtonProps {
   availableForSale: boolean;

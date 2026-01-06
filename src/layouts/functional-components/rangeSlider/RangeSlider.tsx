@@ -11,7 +11,8 @@ const RangeSlider = ({
 }: {
   maxPriceData: { amount: string; currencyCode: string };
 }) => {
-  const { currencyCode, currencySymbol } = config.shopify;
+  const currencyCode = maxPriceData?.currencyCode || "";
+  const currencySymbol = "";
 
   const maxAmount = parseInt(maxPriceData?.amount);
   const [minValue, setMinValue] = useState(0);
@@ -101,7 +102,7 @@ const RangeSlider = ({
     searchParams.set("minPrice", min.toString());
     searchParams.set("maxPrice", max.toString());
 
-    const newUrl = createUrl("/products", searchParams);
+    const newUrl = createUrl("/", searchParams);
     window.location.href = newUrl;
   }
 

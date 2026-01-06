@@ -1,11 +1,16 @@
 import config from "@/config/config.json";
 import { defaultSort, sorting } from "@/lib/constants";
-import type { PageInfo, Product } from '@/lib/shopify/types';
+import React from "react";
+
+const ProductList = () => <div><!-- Product list removed --></div>;
+
+export default ProductList;
+
 import React, { useEffect, useRef, useState } from 'react';
 import { BiLoaderAlt } from "react-icons/bi";
 import { AddToCart } from './cart/AddToCart';
 
-const ProductList = ({
+/* removed product list */ const _ProductList_removed = ({
   initialProducts,
   initialPageInfo,
   sortKey,
@@ -18,7 +23,7 @@ const ProductList = ({
   reverse: boolean;
   searchValue: string | null;
 }) => {
-  const { currencySymbol } = config.shopify;
+  const currencySymbol = "";
   const [products, setProducts] = useState(initialProducts);
   const [pageInfo, setPageInfo] = useState(initialPageInfo);
   const [loading, setLoading] = useState(false);
@@ -207,13 +212,4 @@ const ProductList = ({
         })}
       </div>
 
-      {pageInfo?.hasNextPage && (
-        <div ref={loaderRef} className="text-center pt-10 pb-4 w-full">
-          {loading ? <BiLoaderAlt className={`animate-spin mx-auto`} size={30} /> : 'Scroll for more'}
-        </div>
-      )}
-    </div>
-  );
-};
 
-export default ProductList;

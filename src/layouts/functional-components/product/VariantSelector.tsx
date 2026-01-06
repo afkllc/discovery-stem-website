@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BsCheckLg } from "react-icons/bs";
 import VariantDropDown from "./VariantDropDown";
 import type { ImageItem } from "./ProductGallery";
-import type { ProductOption, ProductVariant } from "@/lib/shopify/types";
+import React from "react";
+
+const VariantSelector = () => <div><!-- Variant selector removed --></div>;
+
+export default VariantSelector;
+
 
 type Combination = {
   id: string;

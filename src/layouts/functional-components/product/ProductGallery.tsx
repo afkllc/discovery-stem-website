@@ -1,4 +1,9 @@
-import React, { useEffect, useRef, useState, type JSX, type MouseEvent, type TouchEvent } from "react";
+import React from "react";
+
+const ProductGallery = () => <div><!-- Product gallery removed --></div>;
+
+export default ProductGallery;
+
 import { FiZoomIn } from "react-icons/fi";
 import {
   HiOutlineArrowNarrowLeft,

@@ -19,8 +19,8 @@
   },
 
   "settings": {
-    "search": true,
-    "account": true,
+    "search": false,
+    "account": false,
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system"
@@ -45,15 +45,6 @@
   "metadata": {
     "meta_author": "zeon.studio",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Shopify Storefront Boilerplate"
-  },
-
-  "shopify": {
-    "currencySymbol": "৳",
-    "currencyCode": "BDT",
-    "collections": {
-      "hero_slider": "hidden-homepage-carousel",
-      "featured_products": "featured-products"
-    }
+    "meta_description": "Store Template"
   }
 }

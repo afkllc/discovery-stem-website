@@ -1,4 +1,9 @@
 import React from "react";
+
+const CloseCart = () => <button aria-label="close">×</button>;
+
+export default CloseCart;
+
 import { FaXmark } from "react-icons/fa6";
 
 export default function CloseCart({ className }: { className?: string }) {

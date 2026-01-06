@@ -1,4 +1,8 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+
+const PaymentSlider = () => <div><!-- Payment slider removed --></div>;
+
+export default PaymentSlider;
 import { BsChevronRight } from "react-icons/bs";
 // Import Swiper styles
 import "swiper/css";

@@ -1,10 +1,22 @@
-import {
-  HIDDEN_PRODUCT_TAG,
-  SHOPIFY_GRAPHQL_API_ENDPOINT,
-  TAGS,
-} from "@/lib/constants";
-import { isShopifyError } from "@/lib/typeGuards";
-import { ensureStartsWith } from "@/lib/utils";
+// shopify/index.ts — Shopify features removed for a non-ecommerce site.
+// These are minimal no-op implementations so the rest of the site doesn't break.
+
+export async function getProducts() { return { products: [], pageInfo: { hasNextPage: false, endCursor: null } }; }
+export async function getProduct(_slug: string) { return null; }
+export async function getCollections() { return []; }
+export async function getCollectionProducts() { return { products: [], pageInfo: { hasNextPage: false } }; }
+export async function getProductRecommendations() { return []; }
+export async function getMenu() { return []; }
+export async function getPage() { return null; }
+export async function getPages() { return []; }
+export async function getCart() { return null; }
+export async function createCart() { return null; }
+export async function addToCart() { return null; }
+export async function removeFromCart() { return null; }
+export async function updateCart() { return null; }
+export async function createCustomer() { throw new Error("Customer creation disabled"); }
+export async function getCustomerAccessToken() { throw new Error("Customer authentication disabled"); }
+export async function getUserDetails() { return null; }
 import {
   addToCartMutation,
   createCartMutation,

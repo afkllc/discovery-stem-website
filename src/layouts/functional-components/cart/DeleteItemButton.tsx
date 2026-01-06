@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+
+const DeleteItemButton = () => <button disabled>Delete</button>;
+
+export default DeleteItemButton;
 import { FaXmark } from "react-icons/fa6";
 import { removeItemFromCart, refreshCartState } from "@/cartStore";
 import LoadingDots from "../loadings/LoadingDots";

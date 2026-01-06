@@ -1,14 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  HiOutlineArrowNarrowLeft,
-  HiOutlineArrowNarrowRight,
-} from "react-icons/hi";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SkeletonCategory from "./loadings/skeleton/SkeletonCategory";
+import React from "react";
+
+const CollectionsSlider = ({ collections }: { collections?: any[] }) => {
+  return <div><!-- Collections removed — non-shop site --></div>;
+};
+
+export default CollectionsSlider;
 
 const CollectionsSlider = ({ collections }: { collections: any }) => {
   const [_, setInit] = useState(false);
@@ -76,7 +72,7 @@ const CollectionsSlider = ({ collections }: { collections: any }) => {
                   <h3 className="mb-2 font-medium h4">
                     <a
                       className="after:absolute after:inset-0"
-                      href={`/products?c=${handle}`}
+                      href={`/?c=${handle}`}
                     >
                       {title}
                     </a>

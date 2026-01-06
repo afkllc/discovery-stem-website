@@ -1,9 +1,10 @@
-import type { Product } from "@/lib/shopify/types";
 import React from "react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+
+const HeroSlider = ({ images }: { images?: any[] }) => {
+  return <div><!-- Hero slider removed — static content only --></div>;
+};
+
+export default HeroSlider;
 
 const HeroSlider = ({ products }: { products: Product[] }) => {
   return (

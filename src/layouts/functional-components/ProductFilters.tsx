@@ -1,4 +1,9 @@
-import type { ShopifyCollection } from "@/lib/shopify/types";
+import React from "react";
+
+const ProductFilters = () => <div><!-- Product filters removed --></div>;
+
+export default ProductFilters;
+
 import { slugify } from "@/lib/utils/textConverter";
 import React, { useState } from "react";
 import { BsCheckLg } from "react-icons/bs";

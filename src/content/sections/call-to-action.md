@@ -7,6 +7,6 @@ image: "/images/call-to-action.png"
 description: "Subscribe our Newsletter and get all latest information and offers"
 button:
   enable: true
-  label: "Shop Now"
-  link: "/products"
+  label: "Get in touch"
+  link: "/contact"
 ---

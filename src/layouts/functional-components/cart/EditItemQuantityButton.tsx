@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { updateCartItemQuantity, refreshCartState } from "@/cartStore";
-import type { CartItem } from "@/lib/shopify/types";
+import React from "react";
+
+const EditItemQuantityButton = () => <button disabled>—</button>;
+
+export default EditItemQuantityButton;
+
 import LoadingDots from "../loadings/LoadingDots";
 
 interface Props {
