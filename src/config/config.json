@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Discovery Stem",
-    "base_url": "https://storeplate.vercel.app/",
-    "base_path": "/",
+    "base_url": "https://afkllc.github.io/discovery-stem-website/",
+    "base_path": "/discovery-stem-website/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
