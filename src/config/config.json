@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Storeplate",
+    "title": "Discovery Stem",
     "base_url": "https://storeplate.vercel.app/",
     "base_path": "/",
     "trailing_slash": false,
@@ -9,12 +9,12 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "33",
-    "logo_text": "Storeplate"
+    "logo_text": "Discovery Stem"
   },
 
   "announcement": {
-    "enable": true,
-    "content": "<span class='text-center block'>♥️ Loving Storeplate? <a class='underline' href='https://github.com/zeon-studio/storeplate' target='_blank' rel='noopener'>Please ⭐️ on Github</a></span>",
+    "enable": false,
+    "content": "<span class='text-center block'>♥️ Loving Discovery Stem? <a class='underline' href='https://github.com/zeon-studio/storeplate' target='_blank' rel='noopener'>Please ⭐️ on Github</a></span>",
     "expire_days": 7
   },
 
@@ -28,13 +28,13 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Designed And Developed by [Zeon Studio](https://zeon.studio)"
+    "copyright": " Copyright © 2026 International STEM Education Consulting"
   },
 
   "navigation_button": {
     "enable": true,
     "label": "Get Started",
-    "link": "https://github.com/zeon-studio/storeplate"
+    "link": "xx"
   },
 
   "google_tag_manager": {
@@ -43,8 +43,8 @@
   },
 
   "metadata": {
-    "meta_author": "zeon.studio",
+    "meta_author": "afkllc",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Store Template"
+    "meta_description": "All things STEM"
   }
 }
