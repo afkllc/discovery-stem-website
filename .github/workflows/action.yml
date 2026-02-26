@@ -24,7 +24,7 @@ jobs:
         uses: withastro/action@v5
         with:
           package-manager: npm
-          # build-cmd: pnpm run build # The command to run to build your site. Runs the package build script/task by default. (optional)
+          build-cmd: npm run build # The command to run to build your site. Runs the package build script/task by default. (optional)
         # env:
           # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # Use single quotation marks for the variable value. (optional)
 
