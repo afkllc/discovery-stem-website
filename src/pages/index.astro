@@ -8,17 +8,25 @@ const upcomingEvents = getUpcomingEvents();
 ---
 
 <Base>
-  <section class="section">
-    <div class="container text-center py-20">
+  <section class="section" style="padding-bottom: 0px">
+    <div class="container text-center py-0">
       <h1 class="max-md:h1 md:mb-4">Welcome</h1>
       <p class="md:text-lg mb-8">Welcome to Discovery STEM Education's website. Explore our workshops, seminars, competitions, and more.</p>
       <CallToAction />
     </div>
   </section>
 
-  <section class="my-12">
-  <h2>Join Our Upcoming Events</h2>
-  <EventsGrid events={upcomingEvents.slice(0, 3)} />
-  <a href="/events" class="btn mt-6">View All Events</a>
+<section class="my-0">
+  <div class="container mx-auto text-center py-10" style="padding-top: 0px;">
+    <h2 class="text-2xl font-semibold mb-10">Join Our Upcoming Events</h2>
+    <!-- <p class="text-sm text-muted-foreground mb-6">Short intro line (optional) — keep this or remove.</p> -->
+
+    <!-- center & constrain the events grid -->
+    <div class="mx-auto max-w-5xl">
+      <EventsGrid events={upcomingEvents.slice(0, 3)} />
+    </div>
+
+    <a href="/events" class="btn mt-6 inline-block">View All Events</a>
+  </div>
 </section>
 </Base>

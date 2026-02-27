@@ -6,12 +6,25 @@ interface Props {
 }
 
 const { events } = Astro.props;
+
+const count = events.length;
+
+// Dynamically control grid layout
+let gridClasses = "events-grid grid gap-6";
+
+if (count === 1) {
+  gridClasses += " grid-cols-1 justify-items-center";
+} else if (count === 2) {
+  gridClasses += " grid-cols-1 md:grid-cols-2 justify-items-center";
+} else {
+  gridClasses += " grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
+}
 ---
 
-<div class="events-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {events.length > 0 ? (
+<div class={gridClasses}>
+  {count > 0 ? (
     events.map((event) => (
-      <div class="event-item bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
+      <div class="event-item w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
         <img
           src={event.image}
           alt={event.title}

@@ -4,7 +4,7 @@ export const events: Event[] = [
   {
     id: "robotics-101",
     title: "Introduction to Robotics",
-    date: "2024-03-15",
+    date: "2027-03-15",
     time: "10:00",
     location: "STEM Lab, Building A",
     description: "Learn the basics of robotics and build your first robot.",
