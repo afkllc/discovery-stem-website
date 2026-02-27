@@ -1,0 +1,88 @@
+---
+import { events, getUpcomingEvents, getEventsByCategory } from "../../lib/eventsData";
+import Base from "../../layouts/Base.astro";
+import EventsGrid from "../../layouts/components/EventsGrid.astro";
+
+// Get query parameter for filtering
+const category = Astro.url.searchParams.get("category");
+
+let displayEvents = events;
+if (category && ["workshop", "seminar", "competition", "exhibition", "course"].includes(category)) {
+  displayEvents = getEventsByCategory(category as any);
+}
+
+const upcomingEvents = getUpcomingEvents();
+const categoryOptions = ["all", "workshop", "seminar", "competition", "exhibition", "course"];
+---
+
+<Base title="Upcoming Events">
+  <div class="min-h-screen bg-primary/10 dark:bg-darkmode-body">
+    <!-- Header -->
+    <div class="bg-white dark:bg-darkmode-light shadow">
+      <div class="max-w-6xl mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-secondary dark:text-primary mb-4">Upcoming Events</h1>
+        <p class="text-secondary/80 dark:text-primary/80 text-lg">
+          Discover and register for our latest STEM workshops, seminars, competitions, and exhibitions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <!-- Filter Section -->
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-secondary dark:text-primary mb-4">Filter by Category</h2>
+        <div class="flex flex-wrap gap-2">
+          {categoryOptions.map((cat) => (
+            <a
+              href={cat === "all" ? "/events" : `/events?category=${cat}`}
+              class={`px-4 py-2 rounded-full font-medium transition-colors duration-200 capitalize ${
+                (cat === "all" && !category) || category === cat
+                  ? "bg-secondary text-white"
+                  : "bg-primary/20 dark:bg-darkmode-light text-secondary dark:text-primary hover:bg-primary/30 dark:hover:bg-darkmode-body"
+              }`}
+            >
+              {cat}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Events Grid -->
+      <EventsGrid events={displayEvents} />
+
+      <!-- No Events Message -->
+      {displayEvents.length === 0 && (
+        <div class="bg-primary/10 dark:bg-darkmode-light border border-primary dark:border-darkmode-primary rounded-lg p-8 text-center">
+          <p class="text-secondary dark:text-primary mb-4">
+            No events found in this category.
+          </p>
+          <a
+            href="/events"
+            class="text-secondary hover:text-primary dark:text-primary dark:hover:text-secondary font-medium"
+          >
+            View all events →
+          </a>
+        </div>
+      )}
+
+      <!-- Info Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div class="bg-white dark:bg-darkmode-light p-6 rounded-lg shadow text-center">
+          <div class="text-3xl font-bold text-secondary mb-2">{events.length}</div>
+          <p class="text-secondary/80 dark:text-primary/80">Total Events</p>
+        </div>
+        <div class="bg-white dark:bg-darkmode-light p-6 rounded-lg shadow text-center">
+          <div class="text-3xl font-bold text-accent mb-2">{upcomingEvents.length}</div>
+          <p class="text-secondary/80 dark:text-primary/80">Upcoming Events</p>
+        </div>
+        <div class="bg-white dark:bg-darkmode-light p-6 rounded-lg shadow text-center">
+          <div class="text-3xl font-bold text-dark mb-2">
+            {events.reduce((sum, event) => sum + (event.capacity || 0), 0)}+
+          </div>
+          <p class="text-secondary/80 dark:text-primary/80">Total Capacity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>

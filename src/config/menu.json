@@ -5,27 +5,20 @@
       "url": "/"
     },
     {
-      "name": "Products",
-      "url": "/about"
+      "name": "Events",
+      "url": "/events",
+      "hasChildren": false,
+      "children": [
+        { "name": "Workshop", "url": "/events?category=workshop" },
+        { "name": "Seminar", "url": "/events?category=seminar" },
+        { "name": "Competition", "url": "/events?category=competition" },
+        { "name": "Exhibition", "url": "/events?category=exhibition" },
+        { "name": "Course", "url": "/events?category=course" }
+      ]
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "About",
-          "url": "/about"
-        },
-        {
-          "name": "Contact",
-          "url": "/contact"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
-        }
-      ]
+      "name": "About",
+      "url": "/about"
     },
     {
       "name": "Contact",
@@ -38,8 +31,8 @@
       "url": "/about"
     },
     {
-      "name": "Products",
-      "url": "/about"
+      "name": "Events",
+      "url": "/events"
     },
     {
       "name": "Contact",

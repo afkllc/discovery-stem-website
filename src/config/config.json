@@ -1,20 +1,20 @@
 {
   "site": {
-    "title": "Discovery Stem",
-    "base_url": "https://afkllc.github.io/discovery-stem-website/",
-    "base_path": "/discovery-stem-website/",
+    "title": "Discovery STEM Education",
+    "base_url": "https://discoverystem.org.uk/",
+    "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "150",
-    "logo_height": "33",
-    "logo_text": "Discovery Stem"
+    "logo": "/images/discovery-stem-logo.png",
+    "logo_darkmode": "/images/discovery-stem-logo-dark.png",
+    "logo_width": "80",
+    "logo_height": "22",
+    "logo_text": "Discovery STEM Education"
   },
 
   "announcement": {
     "enable": false,
-    "content": "<span class='text-center block'>♥️ Loving Discovery Stem? <a class='underline' href='https://github.com/zeon-studio/storeplate' target='_blank' rel='noopener'>Please ⭐️ on Github</a></span>",
+    "content": "<span class='text-center block'>Welcome to Discovery STEM Education! Stay updated with our latest events and programs.</span>",
     "expire_days": 7
   },
 

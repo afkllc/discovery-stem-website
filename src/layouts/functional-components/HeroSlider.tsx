@@ -1,10 +1,16 @@
 import React from "react";
 
-const HeroSlider = ({ images }: { images?: any[] }) => {
-  return <div><!-- Hero slider removed — static content only --></div>;
-};
+// original component exported by the template
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 
-export default HeroSlider;
+interface Product {
+  id: string;
+  title: string;
+  description?: string;
+  handle?: string;
+  featuredImage?: { url: string };
+}
 
 const HeroSlider = ({ products }: { products: Product[] }) => {
   return (

@@ -16,6 +16,4 @@ contact_meta:
   - name: "Phone"
     contact: "Mobile: (08) 123 456 789 </br> Hotline: 1009 678 456"
 
-  - name: "Shop Time"
-    contact: "Available at 10am-8pm </br>"
 ---

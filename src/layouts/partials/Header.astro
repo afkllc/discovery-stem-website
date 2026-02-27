@@ -38,12 +38,12 @@ const isParentActive = (children: any[]) => {
         <ul class="flex items-center space-x-6">
           {
             menu.main.map((menuItem) => (
-              menuItem.hasChildren ? (
+              menuItem.hasChildren && Array.isArray(menuItem.children) ? (
                 <li class="relative group">
                   <button
                     class:list={[
                       "nav-link flex items-center py-2 px-3",
-                      isParentActive(menuItem.children) && "text-primary font-medium",
+                      isParentActive(menuItem.children) && "text-secondary font-medium",
                     ]}
                     aria-haspopup="true"
                   >
@@ -51,7 +51,7 @@ const isParentActive = (children: any[]) => {
                   </button>
 
                   <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded-md shadow py-2 min-w-[160px] z-20">
-                    {menuItem.children.map((child) => (
+                    {menuItem.children.map((child: { name: string; url: string }) => (
                       <li>
                         <a
                           href={child.url}
@@ -67,7 +67,7 @@ const isParentActive = (children: any[]) => {
                 <li>
                   <a
                     href={menuItem.url}
-                    class:list={["nav-link block py-2 px-3 rounded-lg transition-colors", isMenuItemActive(menuItem.url) && "text-primary font-medium"]}
+                    class:list={["nav-link block py-2 px-3 rounded-lg transition-colors", isMenuItemActive(menuItem.url) && "text-secondary font-medium"]}
                   >
                     {menuItem.name}
                   </a>
@@ -76,7 +76,7 @@ const isParentActive = (children: any[]) => {
             ))
           }
 
-          {
+          <!-- {
             navigation_button.enable && (
               <li class="ml-2">
                 <a
@@ -87,7 +87,7 @@ const isParentActive = (children: any[]) => {
                 </a>
               </li>
             )
-          }
+          } -->
         </ul>
       </div>
     </div>
@@ -155,7 +155,7 @@ const isParentActive = (children: any[]) => {
                           "nav-link w-full flex justify-between items-center",
                           "py-2 px-3 rounded-lg transition-colors",
                           isParentActive(menuItem.children) &&
-                            "text-primary font-medium",
+                            "text-secondary font-medium",
                         ]}
                         data-submenu-toggle
                       >
@@ -184,7 +184,7 @@ const isParentActive = (children: any[]) => {
                                 "nav-dropdown-link block",
                                 "py-2 px-3 rounded-lg transition-colors",
                                 isMenuItemActive(child.url) &&
-                                  "text-primary font-medium",
+                                  "text-secondary font-medium",
                               ]}
                             >
                               {child.name}
@@ -200,7 +200,7 @@ const isParentActive = (children: any[]) => {
                         "nav-link block",
                         "py-2 px-3rounded-lg transition-colors",
                         isMenuItemActive(menuItem.url) &&
-                          "text-primary font-medium",
+                          "text-secondary font-medium",
                       ]}
                     >
                       {menuItem.name}

@@ -1,12 +1,11 @@
 ---
 enable: true
-title: "Curved Collection for Your
-Bedroom Get 25% Off"
-sub_title: "Deal of the Week"
+title: "STEM Half-Term Camp: Code, Build & Create"
+sub_title: "Coding & robotics for ages 10–14"
 image: "/images/call-to-action.png"
-description: "Subscribe our Newsletter and get all latest information and offers"
+description: "Join our half-term STEM camp! Daily coding challenges, beginner robotics, and creative projects. There are limited spaces, so secure your child’s spot today!"
 button:
   enable: true
-  label: "Get in touch"
-  link: "/contact"
+  label: "Register"
+  link: "/events/robotics-101"
 ---

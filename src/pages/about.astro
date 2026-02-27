@@ -49,9 +49,12 @@ const {
                 <ImageMod
                   class="rounded-md mx-auto"
                   src={section?.image!}
-                  width={536}
-                  height={449}
+                  width={350}
+                  height={350}
                   alt={section?.title}
+                  loading={"lazy"}
+                  flip={index === 0 ? "horizontal" : "none"}
+                  fit="cover"
                 />
                 <div class="mt-10 lg:mt-0">
                   <h2>{section?.title}</h2>
@@ -73,9 +76,10 @@ const {
                 <ImageMod
                   class="rounded-md mx-auto mt-10 lg:mt-0"
                   src={section.image}
-                  width={536}
-                  height={449}
+                  width={350}
+                  height={300}
                   alt={section.title}
+                  fit="cover"
                 />
               </>
             )}
@@ -85,7 +89,7 @@ const {
     </div>
   </section>
 
-  {
+  <!-- {
     testimonials_section_enable && (
       <Testimonials
         client:load
@@ -93,8 +97,8 @@ const {
         testimonials={testimonials!}
       />
     )
-  }
-
+  } -->
+<!-- 
   <section>
     <div class="container">
       <div class="text-center">
@@ -130,47 +134,10 @@ const {
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="section">
-    <div class="container">
-      <div
-        class="bg-light px-7 py-20 dark:bg-darkmode-light text-center rounded-md"
-      >
-        <h2>Reasons to shop with us</h2>
 
-        <div class="row justify-center gap-6 mt-14">
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaHeadset size={48} />
-            </div>
-            <h3 class="md:h4 mt-6 mb-4">24/7 Friendly Support</h3>
-            <p>Our support team always ready for you to 7 days a week</p>
-          </div>
-
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaBoxOpen size={48} />
-            </div>
-            <h3 class="md:h4 mt-6 mb-4">7 Days Easy Return</h3>
-            <p>Product any fault within 7 days for an immediately exchange.</p>
-          </div>
-
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaRegCheckCircle size={48} />
-            </div>
-            <h3 class="md:h4 mt-6 mb-4">Quality Guaranteed</h3>
-            <p>
-              If your product are not perfect, return them for a full refund
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
+  <!-- <section>
     <div class="container">
       <div
         class="bg-light px-7 lg:px-32 py-20 dark:bg-darkmode-light mb-14 xl:mb-28 rounded-md"
@@ -201,5 +168,5 @@ const {
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </Base>

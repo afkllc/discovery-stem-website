@@ -1,0 +1,51 @@
+---
+import type { Event } from "../../types/eventCollection";
+
+interface Props {
+  events: Event[];
+}
+
+const { events } = Astro.props;
+---
+
+<div class="events-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {events.length > 0 ? (
+    events.map((event) => (
+      <div class="event-item bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
+        <img
+          src={event.image}
+          alt={event.title}
+          class="w-full h-40 object-cover"
+        />
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <span class="text-sm font-semibold text-secondary dark:text-primary capitalize">
+              {event.category}
+            </span>
+            <span class="text-sm text-secondary/80 dark:text-primary/80">
+              {new Date(event.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-secondary dark:text-primary mb-1">
+            {event.title}
+          </h3>
+          <p class="text-secondary/80 dark:text-primary/80 text-sm mb-3">
+            {event.description}
+          </p>
+          <a
+            href={`/events/${event.id}`}
+            class="text-secondary hover:text-primary dark:text-primary dark:hover:text-secondary font-medium text-sm"
+          >
+            Learn More →
+          </a>
+        </div>
+      </div>
+    ))
+  ) : (
+    <div class="col-span-full text-center py-12">
+      <p class="text-gray-600 dark:text-gray-400 text-lg">
+        No events found. Check back soon!
+      </p>
+    </div>
+  )}
+</div>

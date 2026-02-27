@@ -6,9 +6,17 @@ image: ""
 draft: false
 ---
 
-## Storeplate Solutions License Agreement
+## Terms of Service for Discovery STEM Education
 
-Your Rights Roxboro Lighting Limited trading as Onlinelightshop is a UK based company and complies with UK consumer law including the Distance Selling Regulations. This means that shopping with Onlinelightshop is safe. With 30 years experience in lighting retailing we aim to give a thorough and reliable service, you’ll get your items delivered and we’ll sort out any problems you have. Our Terms and Conditions do not affect your statutory rights. Distance Selling Regulations give you the right to cancel an order and return any goods that may already have been dispatched, (see Returns for Refund) up to 7 days from receipt. Our returns policy allows 21 days.
+Welcome to the Discovery STEM Education website. By using our site and participating in our events, you agree to the following terms and conditions. These terms govern your access and use of the site, your participation in programs, and any materials provided by Discovery STEM Education.
+
+- We provide educational content and events aimed at supporting STEM learning. Participation is voluntary and may require registration.
+- All content on this site is for informational purposes only and may change without notice.
+- We do not guarantee any specific outcome from participation; educational results vary by individual.
+- Your use of the site is at your own risk. We are not responsible for any injuries, losses or damages arising from participation in our events.
+- We reserve the right to modify or discontinue any aspect of the site or our programs at any time.
+
+For questions about these terms, contact us at the address on the Contact page.
 
 ##### [Download our Returns Form here.](#http://localhost:4321/terms-services)
 

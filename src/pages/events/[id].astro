@@ -1,0 +1,166 @@
+---
+import { events, getEventById } from "../../lib/eventsData";
+import Base from "../../layouts/Base.astro";
+
+export function getStaticPaths() {
+  return events.map((event) => ({
+    params: { id: event.id },
+  }));
+}
+
+const { id } = Astro.params;
+const event = getEventById(id);
+
+if (!event) {
+  return Astro.redirect("/404");
+}
+
+const eventDate = new Date(event.date);
+const formattedDate = eventDate.toLocaleDateString("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  year: "numeric"
+});
+---
+
+<Base title={event.title}>
+  <div class="min-h-screen bg-primary/10 dark:bg-darkmode-body">
+    <!-- Hero Section -->
+    <div class="h-96 bg-secondary text-white relative overflow-hidden">
+      <img
+        src={event.image}
+        alt={event.title}
+        class="w-full h-full object-cover opacity-60"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-8">
+        <div class="max-w-4xl mx-auto w-full">
+          <div class="inline-block bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold capitalize mb-4">
+            {event.category}
+          </div>
+          <h1 class="text-5xl font-bold mb-4 text-primary">{event.title}</h1>
+          <div class="flex gap-8 text-lg">
+            <div class="flex items-center gap-2">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              {formattedDate}
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              {event.time}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Description -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">About This Event</h2>
+            <p class="text-gray-700 dark:text-gray-300 whitespace-pre-line leading-relaxed">
+              {event.longDescription || event.description}
+            </p>
+          </div>
+
+          <!-- Agenda -->
+          {event.agenda && event.agenda.length > 0 && (
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow mb-8">
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Event Agenda</h2>
+              <div class="space-y-4">
+                {event.agenda.map((item) => (
+                  <div class="flex gap-4 pb-4 border-b dark:border-gray-700 last:border-b-0">
+                    <div class="flex-shrink-0">
+                      <div class="flex items-center justify-center w-20 h-20 bg-primary/20 dark:bg-darkmode-light rounded-lg">
+                        <span class="font-bold text-secondary dark:text-primary">{item.time}</span>
+                      </div>
+                    </div>
+                    <div class="flex-1 pt-2">
+                      <p class="text-gray-900 dark:text-white font-medium">{item.activity}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Speakers -->
+          {event.speakers && event.speakers.length > 0 && (
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow">
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Speakers</h2>
+              <div class="space-y-4">
+                {event.speakers.map((speaker) => (
+                  <div class="flex gap-4 pb-4 border-b dark:border-gray-700 last:border-b-0">
+                    <div class="flex-shrink-0">
+                      <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full"></div>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-bold text-secondary dark:text-primary">{speaker.name}</h3>
+                      {speaker.bio && (
+                        <p class="text-secondary/80 dark:text-primary/80 text-sm">{speaker.bio}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Event Details Card -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow sticky top-4">
+            <h3 class="text-xl font-bold text-secondary dark:text-primary mb-4">Event Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-secondary/80 dark:text-primary/80 font-medium">Location</p>
+                <p class="text-secondary dark:text-primary">{event.location}</p>
+              </div>
+
+              {event.capacity && (
+                <div>
+                  <p class="text-sm text-secondary/80 dark:text-primary/80 font-medium">Capacity</p>
+                  <p class="text-secondary dark:text-primary">{event.capacity} Participants</p>
+                </div>
+              )}
+
+              {event.tags && event.tags.length > 0 && (
+                <div>
+                  <p class="text-sm text-secondary/80 dark:text-primary/80 font-medium mb-2">Tags</p>
+                  <div class="flex flex-wrap gap-2">
+                    {event.tags.map((tag) => (
+                      <span class="bg-primary/20 dark:bg-darkmode-light text-secondary dark:text-primary px-3 py-1 rounded-full text-xs font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {event.registrationUrl && (
+                <a
+                  href={event.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block w-full text-center bg-secondary hover:bg-primary text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200"
+                >
+                  Register Now
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>

@@ -10,7 +10,8 @@ import config from "./src/config/config.json";
 // https://astro.build/config
 export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
-  base: config.site.base_path ? config.site.base_path : "/",
+  // use root base during development to avoid double-prefixing
+  base: process.env.NODE_ENV === "development" ? "/" : (config.site.base_path || "/"),
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: { service: sharp() },
   output: "static",

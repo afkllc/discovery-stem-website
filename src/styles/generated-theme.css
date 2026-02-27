@@ -6,14 +6,16 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #121212;
-  --color-body: #fff;
-  --color-border: #eaeaea;
-  --color-light: #f2f2f2;
+  --color-primary: #afc4c9;
+  --color-secondary: #09348e;
+  --color-accent: #89e94d;
+  --color-body: #f8fafc;
+  --color-border: #b0b0b0;
+  --color-light: #e5e7eb;
   --color-dark: #000;
-  --color-text: #444;
-  --color-text-dark: #000;
-  --color-text-light: #666;
+  --color-text: #09348e;
+  --color-text-dark: #222;
+  --color-text-light: #666666;
 
   /* === Darkmode Colors === */
   --color-darkmode-primary: #fff;

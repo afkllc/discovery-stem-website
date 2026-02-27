@@ -1,14 +1,24 @@
 ---
 import Base from "@/layouts/Base.astro";
 import CallToAction from "@/partials/CallToAction.astro";
+import { getUpcomingEvents } from "../lib/eventsData";
+import EventsGrid from "../layouts/components/EventsGrid.astro";
+
+const upcomingEvents = getUpcomingEvents();
 ---
 
 <Base>
   <section class="section">
     <div class="container text-center py-20">
       <h1 class="max-md:h1 md:mb-4">Welcome</h1>
-      <p class="md:text-lg mb-8">Beautiful site built from the Storeplate template — shop features removed.</p>
+      <p class="md:text-lg mb-8">Welcome to Discovery STEM Education's website. Explore our workshops, seminars, competitions, and more.</p>
       <CallToAction />
     </div>
   </section>
+
+  <section class="my-12">
+  <h2>Join Our Upcoming Events</h2>
+  <EventsGrid events={upcomingEvents.slice(0, 3)} />
+  <a href="/events" class="btn mt-6">View All Events</a>
+</section>
 </Base>

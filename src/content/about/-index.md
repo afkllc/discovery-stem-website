@@ -7,13 +7,13 @@ draft: false
 
 #About Us
 about_us:
-  - title: "Our Company"
-    image: "/images/aboutUs.png"
-    content: "Welcome to **Storeplate** where brilliance meets innovation. We take pride in being your ultimate destination for exquisite lighting solutions that illuminate spaces and lives alike. With a passion for creating luminous experiences, we curate a diverse range of cutting-edge light fixtures designed to elevate any environment. Our commitment to quality craftsmanship and a keen eye for aesthetic appeal ensures that each product we offer is not just a source of light,<br/><br/> but a work of art in its own right. Whether you're seeking ambient elegance for your home or functional brilliance for a commercial space, [Your Company Name] is dedicated to bringing your vision to light. Explore our collection and let your surroundings shine with a touch of our radiant expertise. Elevate your space, embrace the light, only with **Storeplate**."
+  - title: "Our Mission"
+    image: "/images/aboutUs.webp"
+    content: "Discovery STEM Education is dedicated to empowering young minds through engaging, hands-on learning experiences in science, technology, engineering, and mathematics. Our programs are designed to spark curiosity, build confidence, and foster the next generation of innovators. We partner with educators, industry professionals, and community organizations to create opportunities that make STEM accessible and enjoyable for all students."
 
-  - title: "Who We Are ?"
-    image: "/images/aboutUs.png"
-    content: "At **Storeplate** we illuminate your world with a curated collection of exceptional lighting solutions. Established with a passion for transforming spaces and creating ambiance, we stand as a beacon of quality and style in the realm of lighting. With a keen eye for design and a commitment to sourcing the finest materials, we pride ourselves on offering a diverse range of work that not only brighten spaces but also elevate aesthetics. <br/><br/> Committed to delivering excellence, we prioritize customer satisfaction and provide expert guidance to help you find the perfect lighting solution for any setting. Welcome to **Storeplate** where light meets inspiration. Illuminate your world today!"
+  - title: "Who We Are"
+    image: "/images/aboutUs2.webp"
+    content: "We are a community-driven nonprofit organization committed to delivering high-quality STEM workshops, seminars, competitions, and exhibitions. Founded by educators and engineers passionate about making STEM education fun and inclusive, our team works tirelessly to develop curriculum and events that align with real-world applications. Whether you're a student, teacher, or parent, we invite you to join us on a journey of discovery and learning."
 
 # Frequently Asked Questions
 faq_section_title: "Frequently Asked Questions"
@@ -43,24 +43,24 @@ testimonials_section_enable: true
 testimonials_section_title: "What Our Client Says"
 testimonials:
   - name: "Ava Sinclair"
-    designation: "Lead Frontend Architect"
+    designation: "STEM Teacher"
     avatar: "/images/avatar-sm.png"
-    content: "Storeplate has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Storeplate’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "Discovery STEM Education's workshops have transformed the way my students engage with science and technology. The hands-on activities are both educational and fun, and I see a real difference in their motivation."
 
   - name: "Jordan Patel"
-    designation: "E-commerce Solutions Strategist"
+    designation: "Program Coordinator"
     avatar: "/images/avatar-sm.png"
-    content: "Storeplate has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Storeplate’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "Partnering with Discovery STEM Education allowed us to offer high-quality STEM events that our community truly appreciates. Their team is professional, creative, and responsive."
 
   - name: "Lena Brooks"
-    designation: "Digital Experience Specialist"
+    designation: "Parent Volunteer"
     avatar: "/images/avatar-sm.png"
-    content: "Storeplate has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Storeplate’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "My child is now excited to learn because of the amazing hands-on experiments and challenges provided by Discovery STEM Education. We couldn’t be happier with their programs!"
 
   - name: "Marvin McKinney"
-    designation: "Web Designer"
+    designation: "Student"
     avatar: "/images/avatar-sm.png"
-    content: "Storeplate has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Storeplate’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "The coding competition hosted by Discovery STEM was the highlight of our year. It pushed me to improve my skills and meet new friends with similar interests."
 
 # Our Staff
 staff_section_enable: true
