@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Discovery STEM Education",
-    "base_url": "https://afkllc.github.io/",
-    "base_path": "/discovery-stem-website",
+    "base_url": "https://discovery-stem.netlify.app",
+    "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/discovery-stem-logo.png",
