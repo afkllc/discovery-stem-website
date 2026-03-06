@@ -5,7 +5,7 @@ interface Props {
   events: Event[];
 }
 
-const { events } = Astro.props;
+const { events } = Astro.props as Props;
 
 const count = events.length;
 
@@ -24,7 +24,12 @@ if (count === 1) {
 <div class={gridClasses}>
   {count > 0 ? (
     events.map((event) => (
-      <div class="event-item w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
+      /* Make the entire card a link — card-level classes here */
+      <a
+        href={`/events/${event.id}`}
+        class="group block w-full max-w-sm mx-auto bg-white dark:bg-gray-800 rounded-lg shadow transition-transform transform hover:scale-105 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary overflow-visible"
+        aria-label={`${event.title} — View event`}
+      >
         <img
           src={event.image}
           alt={event.title}
@@ -45,14 +50,10 @@ if (count === 1) {
           <p class="text-secondary/80 dark:text-primary/80 text-sm mb-3">
             {event.description}
           </p>
-          <a
-            href={`/events/${event.id}`}
-            class="text-secondary hover:text-primary dark:text-primary dark:hover:text-secondary font-medium text-sm"
-          >
-            Learn More →
-          </a>
+
+          {/* removed the inner "Learn More" anchor because the whole card is clickable */}
         </div>
-      </div>
+      </a>
     ))
   ) : (
     <div class="col-span-full text-center py-12">

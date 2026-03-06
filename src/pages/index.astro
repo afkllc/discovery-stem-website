@@ -16,15 +16,12 @@ const upcomingEvents = getUpcomingEvents();
     </div>
   </section>
 
-<section class="my-0">
+<section class="my-0 dark:[&_*]:!text-white">
   <div class="container mx-auto text-center py-10" style="padding-top: 0px;">
     <h2 class="text-2xl font-semibold mb-10">Join Our Upcoming Events</h2>
-    <!-- <p class="text-sm text-muted-foreground mb-6">Short intro line (optional) — keep this or remove.</p> -->
-
-    <!-- center & constrain the events grid -->
-    <div class="mx-auto max-w-5xl">
-      <EventsGrid events={upcomingEvents.slice(0, 3)} />
-    </div>
+  <div class="mx-auto max-w-5xl overflow-visible">
+  <EventsGrid events={upcomingEvents.slice(0, 3)} />
+</div>
 
     <a href="/events" class="btn mt-6 inline-block">View All Events</a>
   </div>
