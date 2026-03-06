@@ -44,7 +44,7 @@ const isParentActive = (children: any[]) => {
                   <button
                     class:list={[
                       "nav-link flex items-center py-2 px-3",
-                      isParentActive(menuItem.children) && "text-secondary font-medium",
+                      isParentActive(menuItem.children) && "text-secondary font-medium dark:text-[#60A5FA]",
                     ]}
                     aria-haspopup="true"
                   >
@@ -68,7 +68,7 @@ const isParentActive = (children: any[]) => {
                 <li>
                   <a
                     href={menuItem.url}
-                    class:list={["nav-link block py-2 px-3 rounded-lg transition-colors", isMenuItemActive(menuItem.url) && "text-secondary font-medium"]}
+                    class:list={["nav-link block py-2 px-3 rounded-lg transition-colors", isMenuItemActive(menuItem.url) && "text-secondary font-medium dark:text-[#60A5FA]"]}
                   >
                     {menuItem.name}
                   </a>
@@ -156,7 +156,7 @@ const isParentActive = (children: any[]) => {
                           "nav-link w-full flex justify-between items-center",
                           "py-2 px-3 rounded-lg transition-colors",
                           isParentActive(menuItem.children) &&
-                            "text-secondary font-medium",
+                            "text-secondary font-medium dark:text-[#60A5FA]",
                         ]}
                         data-submenu-toggle
                       >
@@ -185,7 +185,7 @@ const isParentActive = (children: any[]) => {
                                 "nav-dropdown-link block",
                                 "py-2 px-3 rounded-lg transition-colors",
                                 isMenuItemActive(child.url) &&
-                                  "text-secondary font-medium",
+                                  "text-secondary font-medium dark:text-[#60A5FA]",
                               ]}
                             >
                               {child.name}
@@ -201,7 +201,7 @@ const isParentActive = (children: any[]) => {
                         "nav-link block",
                         "py-2 px-3rounded-lg transition-colors",
                         isMenuItemActive(menuItem.url) &&
-                          "text-secondary font-medium",
+                          "text-secondary font-medium dark:text-[#60A5FA]",
                       ]}
                     >
                       {menuItem.name}
