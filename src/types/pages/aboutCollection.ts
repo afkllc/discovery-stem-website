@@ -18,48 +18,5 @@ export const aboutCollection = defineCollection({
         content: z.string(),
       }),
     ),
-
-    // Frequently Asked Questions section
-    faq_section_title: z.string().optional(),
-    faq_section_subtitle: z.string().optional(),
-    button: z
-      .object({
-        enable: z.boolean(),
-        label: z.string(),
-        link: z.string(),
-      })
-      .optional(),
-    faqs: z.array(
-      z.object({
-        title: z.string(),
-        content: z.string(),
-      }),
-    ),
-
-    // Testimonials section
-    testimonials_section_enable: z.boolean().optional(),
-    testimonials_section_title: z.string().optional(),
-    testimonials: z
-      .array(
-        z.object({
-          name: z.string(),
-          designation: z.string(),
-          avatar: z.string(),
-          content: z.string(),
-        }),
-      )
-      .optional(),
-
-    // Staff section
-    staff_section_enable: z.boolean().optional(),
-    staff: z
-      .array(
-        z.object({
-          name: z.string(),
-          designation: z.string(),
-          avatar: z.string(),
-        }),
-      )
-      .optional(),
   }),
 });
